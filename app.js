@@ -637,14 +637,6 @@ for(let x in user){
 	console.log(val)
 
 
-
-
-
-
-
-*/
-
-
 //GLOBAL SCOPE
 
 var a = 1;
@@ -674,3 +666,5 @@ for(let a = 0;a < 10; a++) {
 
 console.log('Global scope: ', a, b, c);//	7 2 3
 	// let and cost stayed the same(2 3),var changed from 1 to 7
+
+*/
