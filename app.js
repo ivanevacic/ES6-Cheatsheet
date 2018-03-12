@@ -419,7 +419,7 @@ else
 	console.log('INCORRECT'); */
 
 //SWITCH
-const color = 'red';
+/* const color = 'red';
 switch(color){
 	case 'red':
 		console.log('Color is red');
@@ -434,4 +434,58 @@ switch(color){
 		//Nothing from above cases
 		console.log('Color is something else');
 		break;
+} */
+
+//FUNCTION
+
+//function definition
+/* function greet(firstName, lastName) {//(firstName = 'John', lastName = 'Doe')	->ES6 WAY
+	//if there are no arguments when function is calles
+		//default arguments are defined here
+		//-> VANILLA WAY
+	if(typeof firstName === 'undefined'){firstName = 'Ivan'}
+	if(typeof lastName === 'undefined'){lastName = 'Evačić'}
+	return `Hello ${firstName} ${lastName}`;
 }
+
+//function call
+console.log(greet());//greet('Ivan', 'Evačić)
+
+//function expressions
+const square = function (x = 3) {//x = 3 is default if no argument is given when calling function
+	return x*x;
+};
+
+console.log(square());//9
+ */
+///IMMIDIATLEY INVOKABLE FUNCTION EPXRESSIONS -IIFEs
+
+	//FUNCTION WE DECLARE AND RUN  IN THE SAME TIME
+
+	//Used in module pattern
+/* 	(function(){
+		console.log('IIFE ran..');
+	})();
+	(function(name){
+		console.log(`Hello ${name}`);
+	})('Brad');
+
+	//functions inside objects
+	const todo = {
+		add: function(){
+			console.log('Add todo..');
+		},
+		edit: function(id){
+			console.log(`Edit todo with id ${id}`)
+		}
+	}
+	//object functions can be declared outside object
+	todo.delete = function(){
+		console.log('Delete todo....');
+	}
+
+	//call object function
+	todo.add();
+	todo.edit(2012);
+	todo.delete();
+ */
