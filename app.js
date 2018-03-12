@@ -372,3 +372,48 @@ birthday.setDate(12);//	Thu Mar 12 1981 00:00:00 GMT+0100 (CET)
 birthday.setHours(3);//	Thu Mar 12 1981 03:00:00 GMT+0100 (CET)
 console.log(birthday);
 console.log(val); */
+
+//IF ,EQUAL
+
+/* const id = 100;
+//EQUAL TO VALUE AND TYPE
+if(id === 100){
+	console.log('CORRECT');//this
+}	else {
+	console.log('INCORRECT');
+}
+//NOT EQUAL TO VALUE AND TYPE
+if(id !== 100){
+	console.log('CORRECT');
+}	else {
+	console.log('INCORRECT');//this
+} */
+//
+
+//GREATER OR LESS THEN
+const id = 100;
+if(id >= 200){
+	console.log('correct');
+}	else	{
+	console.log('incorrect');
+}
+
+//else if
+const color = 'yellow';
+if(color === 'red'){
+	console.log('Color is red');
+}	else if(color === 'blue'){
+	console.log('Color is blue');
+}
+else {
+	console.log('Color is something else');
+}
+
+//TERNARY OPERATOR
+console.log(id === 100 ? 'CORRECT' : 'INCORRECT');// if id===100,console.log correct,else incorrect
+
+//WITHOUT BRACES
+if(id === 100)
+	console.log('CORRECT');
+else
+	console.log('INCORRECT');
