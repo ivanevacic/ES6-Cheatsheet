@@ -391,7 +391,7 @@ if(id !== 100){
 //
 
 //GREATER OR LESS THEN
-const id = 100;
+/* const id = 100;
 if(id >= 200){
 	console.log('correct');
 }	else	{
@@ -416,4 +416,22 @@ console.log(id === 100 ? 'CORRECT' : 'INCORRECT');// if id===100,console.log cor
 if(id === 100)
 	console.log('CORRECT');
 else
-	console.log('INCORRECT');
+	console.log('INCORRECT'); */
+
+//SWITCH
+const color = 'red';
+switch(color){
+	case 'red':
+		console.log('Color is red');
+		break;
+	case 'blue':
+		console.log('Color is blue');
+		break;
+	case 'black':
+		console.log('Color is black');
+		break;
+	default:
+		//Nothing from above cases
+		console.log('Color is something else');
+		break;
+}
