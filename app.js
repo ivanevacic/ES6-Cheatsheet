@@ -158,5 +158,58 @@ console.log(val); */
 
 
 
+//	STRINGS
+/* const firstName = 'William';
+const lastName = 'Johnson';
+const age = 36;
+
+let val;
+
+// concatenation
+val = firstName + lastName;
+val = firstName + ' ' + lastName;	//	William Johnson
+//append
+val = 'Ivan';
+val += 'Evačić'	//	IvanEvačić
+val = 'Hello, my name is ' + firstName + ' and i am ' + age;	//Hello, my name is William and i am 36
+//escaping
+val = 'That\'s awesome,I can\'t wait';	//	->'That's awesome,I can't wait'
+//length
+val = firstName.length;	// counts the numbers of elements in string,no need for ()
+//concat method
+val = firstName.concat(' ', lastName);//William Johnson
+//to upper case
+val = firstName.toUpperCase();//WILLIAM
+//to lower case
+val = firstName.toLowerCase();//william
+	//array
+val = firstName[0];	//access 1st letter in string
+	//indexOf()->left to right
+	val = firstName.indexOf('l');	//2->position index of first occurance of 'l' in firstName
+	//lastIndexOf()->right to left
+	val = firstName.lastIndexOf('l');//3->position index of first occurance of 'l' in firstName
+
+	//charAt()
+	val = firstName.charAt('2');//gives l->element that has index 2 starting from left
+	//	get last char
+	val = firstName.charAt(firstName.length -1);//length of firstName -1,minus the last char because we start from 0
+	//	substrings
+	val = firstName.substring(0, 4);//goes from index 0-3 and catches the values in that range->Will
+	//	slice
+	varl = firstName.slice(0,4);//Will
+		
+		const str = 'Hello there my name is Ivan';
+		const tags = 'web design,web development,programming';
+		//	splits string into array of chars
+		val = str.split('');
+		//	splits into array
+		val = tags.split(',');
+
+		//replace
+		val = str.replace('Ivan', 'Jack');//inside the string,replace Ivan with Jack
+		//includes
+		val = str.includes('Hello');//	if there is occurance of 'Hello' in string,return true,else false
+console.log(val); */
+
 
 
