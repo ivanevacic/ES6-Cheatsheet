@@ -642,11 +642,35 @@ for(let x in user){
 
 
 
-
-
-
-
-
-
-	
 */
+
+
+//GLOBAL SCOPE
+
+var a = 1;
+let b = 2;
+const c = 3;
+
+function test(){
+		var a = 4;
+		let b = 5;
+		const c = 6;
+			console.log('Function scope: ', a, b, c);	// 4 5 6
+}
+test();
+
+//BLOCK LEVEL SCOPE
+if(true) {
+	//block scope
+		var a = 7;
+		let b = 8;
+		const c = 9;
+			console.log('If scope: ', a, b, c);	// 7 8 9
+}
+
+for(let a = 0;a < 10; a++) {
+	console.log(`Loop: ${a}`);// 0-9 values here,but in global scope stays 7
+}
+
+console.log('Global scope: ', a, b, c);//	7 2 3
+	// let and cost stayed the same(2 3),var changed from 1 to 7
