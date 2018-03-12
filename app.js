@@ -245,7 +245,7 @@ let html;
 
  //ARRAYS
 		//define arrays
-		 const numbers = [43, 56, 33, 23, 44, 36, 5];
+		/*  const numbers = [43, 56, 33, 23, 44, 36, 5];
 		 const numbers2 = new Array(22, 45, 33, 76, 54);
 		 const fruit = ['Apple', 'Bannana', 'Orange', 'Pear'];
 		 const mixed = [22, 'Hello', true, undefined, null, {a:1, b:1}, new Date()];	
@@ -262,7 +262,7 @@ let html;
 	numbers[2] = 100; 	//index position[2] now has value of 100
 	//find index of value
 	val = numbers.indexOf(36);//gives index position of that number 
-
+ */
 	//	MUTATING ARRAYS
 		//add to the end of array
 		/* numbers.push(250);
@@ -307,3 +307,46 @@ let html;
 
 	console.log(numbers);
 	console.log(val); */
+
+//OBJECT LITERALS
+
+/* 		//	object definition
+		const person = {
+			firstName: 'Steve',
+			lastName: 'Smith',
+			age: 36,
+			email: 'steve@aol.com',
+			hobbies: ['music', 'sports'],
+			adress: {
+				city: 'Miami',
+				state: 'FL'
+			},
+			getBirthYear: function(){
+				return 2017	- this.age;	
+			}
+
+		}
+
+let val;
+//get specific value
+val = person.firstName;
+val = person['firstName'];
+val = person.age;
+val = person.hobbies;//print whole array
+val = person.hobbies[1];//gives element with index position[1]
+val = person.adress.state;
+val = person.getBirthYear();
+console.log(val);
+
+//	Array of objects
+const people = [
+	{name: 'John', age: 30},
+	{name: 'Ivan', age: 21},
+	{name: 'Ratko', age: 26}
+];
+
+//	Iterate trough array of objects
+for(let i = 0;i < people.length;i++) {
+	console.log(people[i]);	//get objects,	get only objects name->(people[i].name)
+}
+ */
