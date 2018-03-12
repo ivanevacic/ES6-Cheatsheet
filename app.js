@@ -350,3 +350,25 @@ for(let i = 0;i < people.length;i++) {
 	console.log(people[i]);	//get objects,	get only objects name->(people[i].name)
 }
  */
+
+ //	DATES AND TIMES
+
+/* let val;
+
+//Init date object
+const today = new Date();//Mon Mar 12 2018 20:39:58 GMT+0100 (CET)
+let birthday = new Date('9-10-1981');//Thu Sep 10 1981 00:00:00 GMT+0100 (CET)
+birthday = new Date('September 10 1981');//Thu Sep 10 1981 00:00:00 GMT+0100 (CET)
+
+val = birthday;
+val = today.getMonth();//current month is march(3),returns 2->zero based[0][1][2->march]
+val = today.getDate();//today's date
+val = today.getDay();//Monday = 1,February = 2,...etc...
+val = today.getFullYear();//2018
+val = today.getHours();//20
+
+birthday.setMonth(2);//	Tue Mar 10 1981 00:00:00 GMT+0100 (CET)
+birthday.setDate(12);//	Thu Mar 12 1981 00:00:00 GMT+0100 (CET)
+birthday.setHours(3);//	Thu Mar 12 1981 03:00:00 GMT+0100 (CET)
+console.log(birthday);
+console.log(val); */
