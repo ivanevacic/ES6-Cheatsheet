@@ -1,7 +1,7 @@
-
+/*
 //	BASIC VARIABLES->VAR
 
-/* 
+ 
 //  We can REASSIGN values using var and let
     var name = 'John Doe';
     console.log(name);
@@ -22,25 +22,25 @@
 	var first_name = 'Jonh';    //  underscore naming of var
 	var FirstName = 'John'; //  pascal case
 
- */
+
 
 //	BASIC VARIABLES->LET,CONST
 
 //  We can REASSIGN values using LET
-	/* let name = 'John';
+	 let name = 'John';
 	console.log(name);
 	name = 'Steve Smith';
-	console.log(name); */
+	console.log(name);
 
-	/*
+	
 		const numbers = [1,2,3,4,5];
 		numbers = [1,2,3]
 		->This is not possible,we can change arrays value,but not the const
-	*/
+
 //	CONST->We cant change value,WE MUST INITIALIZE IT WITH VALUE(CAN'T BE UNDEFINED)
 
 //	DATA TYPES
-/* const name = 'Jonh Doe';
+ const name = 'Jonh Doe';
 console.log(typeof name);	//	string
 
 const age = 45;
@@ -71,10 +71,10 @@ console.log(typeof adress);
 
 const today = new Date();
 console.log(today),
-console.log(typeof today); */
+console.log(typeof today);
 
 //	TYPE CONVERSION
-/* let val;
+ let val;
 
 	//number to string
 		val = 5;
@@ -121,10 +121,9 @@ console.log(typeof today); */
  console.log(sum);	//	11,	if val1 = String(5)--> sum = 56 concatonated 5 and 6
  console.log(typeof sum);	// number,	if val1 = String(5)--> typeof = string
 
-*/
 
 //	MATH
-/* const num1 = 100;
+ const num1 = 100;
 const num2 = 50;
 let val;
 
@@ -154,12 +153,12 @@ val = num1 % num2;
 																		//	*	20 + 1 gives random FLOAT Number between 1 and 20
 			val = Math.floor(Math.random() * 20 + 1);	//	gives random INT number between 1 and 20
 
-console.log(val); */
+console.log(val);
 
 
 
 //	STRINGS
-/* const firstName = 'William';
+ const firstName = 'William';
 const lastName = 'Johnson';
 const age = 36;
 
@@ -209,10 +208,10 @@ val = firstName[0];	//access 1st letter in string
 		val = str.replace('Ivan', 'Jack');//inside the string,replace Ivan with Jack
 		//includes
 		val = str.includes('Hello');//	if there is occurance of 'Hello' in string,return true,else false
-console.log(val); */
+console.log(val);
 
 //	TEMPLATE LITERALS
-/* const name = 'John';
+ const name = 'John';
 const age = 30;
 const job = 'Web Developer';
 const city = 'London';
@@ -241,11 +240,11 @@ let html;
 	//append let html value to index.html dynamically
 	document.body.innerHTML = html;
 
- */
+
 
  //ARRAYS
 		//define arrays
-		/*  const numbers = [43, 56, 33, 23, 44, 36, 5];
+		  const numbers = [43, 56, 33, 23, 44, 36, 5];
 		 const numbers2 = new Array(22, 45, 33, 76, 54);
 		 const fruit = ['Apple', 'Bannana', 'Orange', 'Pear'];
 		 const mixed = [22, 'Hello', true, undefined, null, {a:1, b:1}, new Date()];	
@@ -262,10 +261,10 @@ let html;
 	numbers[2] = 100; 	//index position[2] now has value of 100
 	//find index of value
 	val = numbers.indexOf(36);//gives index position of that number 
- */
+
 	//	MUTATING ARRAYS
 		//add to the end of array
-		/* numbers.push(250);
+		 numbers.push(250);
 		//add to beginning of array
 		numbers.unshift(129);
 		//removes last element of array
@@ -280,9 +279,9 @@ let html;
 		//concatonate arrays
 		val = numbers.concat(numbers2);
 		//sort arrays of strings
-		val = fruit.sort(); */
+		val = fruit.sort();
 		// sort arrays of numbers
-		/* val = numbers.sort();//sorts wrong
+		 val = numbers.sort();//sorts wrong
 			// sorts as INTENDED,from LOWEST to HIGHEST
 		val = numbers.sort(function(x, y){
 			return x - y;
@@ -290,11 +289,11 @@ let html;
 			// sorts as INTENDED,from HIGHEST to LOWEST
 		val = numbers.sort(function(x, y){
 			return y - x;
-		}); */
+		});
 
 		//	FIND
 			//finds first number under 50 in array
-			/* 	function under50(num){
+			 	function under50(num){
 					return num < 50;
 				}
 				val = numbers.find(under50);
@@ -306,11 +305,11 @@ let html;
 
 
 	console.log(numbers);
-	console.log(val); */
+	console.log(val);
 
 //OBJECT LITERALS
 
-/* 		//	object definition
+ 		//	object definition
 		const person = {
 			firstName: 'Steve',
 			lastName: 'Smith',
@@ -349,11 +348,11 @@ const people = [
 for(let i = 0;i < people.length;i++) {
 	console.log(people[i]);	//get objects,	get only objects name->(people[i].name)
 }
- */
+
 
  //	DATES AND TIMES
 
-/* let val;
+ let val;
 
 //Init date object
 const today = new Date();//Mon Mar 12 2018 20:39:58 GMT+0100 (CET)
@@ -371,11 +370,11 @@ birthday.setMonth(2);//	Tue Mar 10 1981 00:00:00 GMT+0100 (CET)
 birthday.setDate(12);//	Thu Mar 12 1981 00:00:00 GMT+0100 (CET)
 birthday.setHours(3);//	Thu Mar 12 1981 03:00:00 GMT+0100 (CET)
 console.log(birthday);
-console.log(val); */
+console.log(val);
 
 //IF ,EQUAL
 
-/* const id = 100;
+ const id = 100;
 //EQUAL TO VALUE AND TYPE
 if(id === 100){
 	console.log('CORRECT');//this
@@ -387,11 +386,11 @@ if(id !== 100){
 	console.log('CORRECT');
 }	else {
 	console.log('INCORRECT');//this
-} */
+}
 //
 
 //GREATER OR LESS THEN
-/* const id = 100;
+ const id = 100;
 if(id >= 200){
 	console.log('correct');
 }	else	{
@@ -416,10 +415,10 @@ console.log(id === 100 ? 'CORRECT' : 'INCORRECT');// if id===100,console.log cor
 if(id === 100)
 	console.log('CORRECT');
 else
-	console.log('INCORRECT'); */
+	console.log('INCORRECT');
 
 //SWITCH
-/* const color = 'red';
+ const color = 'red';
 switch(color){
 	case 'red':
 		console.log('Color is red');
@@ -434,12 +433,12 @@ switch(color){
 		//Nothing from above cases
 		console.log('Color is something else');
 		break;
-} */
+}
 
 //FUNCTION
 
 //function definition
-/* function greet(firstName, lastName) {//(firstName = 'John', lastName = 'Doe')	->ES6 WAY
+ function greet(firstName, lastName) {//(firstName = 'John', lastName = 'Doe')	->ES6 WAY
 	//if there are no arguments when function is calles
 		//default arguments are defined here
 		//-> VANILLA WAY
@@ -457,13 +456,13 @@ const square = function (x = 3) {//x = 3 is default if no argument is given when
 };
 
 console.log(square());//9
- */
+ 
 ///IMMIDIATLEY INVOKABLE FUNCTION EPXRESSIONS -IIFEs
 
 	//FUNCTION WE DECLARE AND RUN  IN THE SAME TIME
 
 	//Used in module pattern
-/* 	(function(){
+ 	(function(){
 		console.log('IIFE ran..');
 	})();
 	(function(name){
@@ -488,11 +487,11 @@ console.log(square());//9
 	todo.add();
 	todo.edit(2012);
 	todo.delete();
- */
+ 
 
  //LOOPS AND ITERATIONS
 	//FOR LOOP
-	/* for(let i = 0;i < 11;i++){
+	for(let i = 0;i < 11;i++){
 		//console.log(i); 0-10
 		if(i === 2){
 			console.log(`${i} is my favourite number`);//	2 is my favourite number
@@ -502,28 +501,28 @@ console.log(square());//9
 			break;//loop stops when i is 5
 		}
 		console.log(i);
-	} */
+	} 
 
 	//WHILE LOOP
-	/* let i = 0;
+	 let i = 0;
 
 	while(i < 10){
 		console.log(`Number: ${i}`);
 		i++;
 	}
- */
+ 
 	//DO WHILE
 		//this is gonna run even this condition first is not true
 		//ALWAYS GONNA RUN ONCE
-		/* let i = 0;
+		 let i = 0;
 		do {
 			console.log('Number ' + i);
 			i++;
 		} while(i < 10);
- */
+ 
 
 //LOOP TROUGH ARRAY
-/* const cars = ['Ford', 'Chevy', 'Honda'];
+ const cars = ['Ford', 'Chevy', 'Honda'];
 
 for(let i = 0; i < cars.length;i++){
 	console.log(cars[i]);
@@ -558,9 +557,96 @@ const user = {
 for(let x in user){
 	//console.log(x);	//gives keys(firstName,lastName,age)
 	console.log(`${x} : ${user[x]}`);
-		/*
+		
 			firstName: 'John',
 			lastName: 'Doe',
 			age: 40
 }
- */
+ 
+
+ //WINDOWS METHODS/OBJECTS/PROPERTIES
+	///window.console.log(123);
+
+	//alert
+	///alert('Hello World!');
+
+	//prompt
+	 const input = prompt();
+	alert(input);
+
+	//confirm
+	 if(confirm('Are you sure')){
+		console.log('yes');
+	}	else{
+		console.log('no');
+	} 
+
+	 let val;
+
+	//outher window height and width
+	val = window.outerHeight;
+	val = window.outerWidth;
+	//inner window height and width
+	val = window.innerHeight;
+	val = window.innerWidth;
+
+	//scroll points
+	val = window.scrollY;
+	val = window.scrollX;
+
+	//	location object
+
+	val = window.location;
+	
+		Location {replace: ƒ, assign: ƒ, href: "http://127.0.0.1:5500/index.html",
+		ancestorOrigins: DOMStringList, 
+		origin: "http://127.0.0.1:5500", …}
+	
+	val = window.location.hostname;//127.0.0.1
+	val = window.location.port;//5500
+
+	 //redirect
+	window.location.href = 'http://google.com';	//redirects to google.com
+	//reload
+	window.location.reload();	//constantly reload 
+
+
+	//history object
+	///window.history.go(-1);	//brings us back whereever we came from (1st link backwards)
+
+	val = window.history.length;//5->number of pages we went before we came here
+
+	//navigator object
+	val = window.navigator;
+	
+		Navigator {vendorSub: "", productSub: "20030107", 
+		vendor: "Google Inc.", maxTouchPoints: 0, 
+		hardwareConcurrency: 4, …}
+		->see console
+	
+	val = window.navigator.appName;//netscape
+	val = window.navigator.appVersion;//5.0 (X11; Linux x86_64) 
+																		 AppleWebKit/537.36 (KHTML, like Gecko)
+																		Ubuntu 
+																		Chromium/64.0.3282.167 
+																		Chrome/64.0.3282.167 
+																		Safari/537.36
+
+	val = window.navigator.language;//en-US
+	
+	console.log(val)
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+*/
