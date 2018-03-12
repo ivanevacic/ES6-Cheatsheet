@@ -212,7 +212,7 @@ val = firstName[0];	//access 1st letter in string
 console.log(val); */
 
 //	TEMPLATE LITERALS
-const name = 'John';
+/* const name = 'John';
 const age = 30;
 const job = 'Web Developer';
 const city = 'London';
@@ -241,4 +241,69 @@ let html;
 	//append let html value to index.html dynamically
 	document.body.innerHTML = html;
 
+ */
 
+ //ARRAYS
+		//define arrays
+		 const numbers = [43, 56, 33, 23, 44, 36, 5];
+		 const numbers2 = new Array(22, 45, 33, 76, 54);
+		 const fruit = ['Apple', 'Bannana', 'Orange', 'Pear'];
+		 const mixed = [22, 'Hello', true, undefined, null, {a:1, b:1}, new Date()];	
+
+	let val;
+
+	//get array length
+	val = numbers.length;// 7
+	//check if is array
+	val = Array.isArray(numbers);	// true
+	//get single value form array
+	val = numbers[0];	//index position->gives 43,ARRAYS ARE ZERO BASED
+	//insert to array
+	numbers[2] = 100; 	//index position[2] now has value of 100
+	//find index of value
+	val = numbers.indexOf(36);//gives index position of that number 
+
+	//	MUTATING ARRAYS
+		//add to the end of array
+		/* numbers.push(250);
+		//add to beginning of array
+		numbers.unshift(129);
+		//removes last element of array
+		numbers.pop();
+		//remove first element of array
+		numbers.shift();
+
+		//splice values
+		numbers.splice(1, 3);
+		//reverse array
+		numbers.reverse();	
+		//concatonate arrays
+		val = numbers.concat(numbers2);
+		//sort arrays of strings
+		val = fruit.sort(); */
+		// sort arrays of numbers
+		/* val = numbers.sort();//sorts wrong
+			// sorts as INTENDED,from LOWEST to HIGHEST
+		val = numbers.sort(function(x, y){
+			return x - y;
+		});
+			// sorts as INTENDED,from HIGHEST to LOWEST
+		val = numbers.sort(function(x, y){
+			return y - x;
+		}); */
+
+		//	FIND
+			//finds first number under 50 in array
+			/* 	function under50(num){
+					return num < 50;
+				}
+				val = numbers.find(under50);
+			//	over 50
+			function over50(num){
+				return num > 50;
+			}
+			val = numbers.find(over50);
+
+
+	console.log(numbers);
+	console.log(val); */
