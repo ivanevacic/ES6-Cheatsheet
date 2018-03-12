@@ -489,3 +489,78 @@ console.log(square());//9
 	todo.edit(2012);
 	todo.delete();
  */
+
+ //LOOPS AND ITERATIONS
+	//FOR LOOP
+	/* for(let i = 0;i < 11;i++){
+		//console.log(i); 0-10
+		if(i === 2){
+			console.log(`${i} is my favourite number`);//	2 is my favourite number
+			continue;
+		}
+		if(i === 5){
+			break;//loop stops when i is 5
+		}
+		console.log(i);
+	} */
+
+	//WHILE LOOP
+	/* let i = 0;
+
+	while(i < 10){
+		console.log(`Number: ${i}`);
+		i++;
+	}
+ */
+	//DO WHILE
+		//this is gonna run even this condition first is not true
+		//ALWAYS GONNA RUN ONCE
+		/* let i = 0;
+		do {
+			console.log('Number ' + i);
+			i++;
+		} while(i < 10);
+ */
+
+//LOOP TROUGH ARRAY
+/* const cars = ['Ford', 'Chevy', 'Honda'];
+
+for(let i = 0; i < cars.length;i++){
+	console.log(cars[i]);
+}
+
+//FOREACH
+cars.forEach(function(car, index, array){	//(car) is iterator
+	console.log(`${index} : ${car}`);//ford,chevy,honda
+	console.log(array);
+});
+
+//MAP
+const users = [
+	{id:1, name:'John'},
+	{id:2, name:'Karen'},
+	{id:3, name:'Tommy'}
+];
+const ids = users.map(function(user){
+	//	returns id of every object in 'users'
+	return user.id;
+});
+console.log(ids);
+
+//FOR IN LOOP
+
+const user = {
+	firstName: 'John',
+	lastName: 'Doe',
+	age: 40
+}
+
+for(let x in user){
+	//console.log(x);	//gives keys(firstName,lastName,age)
+	console.log(`${x} : ${user[x]}`);
+		/*
+			firstName: 'John',
+			lastName: 'Doe',
+			age: 40
+}
+ */
