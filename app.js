@@ -667,4 +667,37 @@ for(let a = 0;a < 10; a++) {
 console.log('Global scope: ', a, b, c);//	7 2 3
 	// let and cost stayed the same(2 3),var changed from 1 to 7
 
+
+
+//	OOP JAVASCRIPT
+
+//	Person constructor
+function Person(name, dob) {
+	//this.name = 'Brad';//hard code name
+	this.name = name;
+	 this.age = age;
+	//by instiating object console.log is called
+	console.log(this); 
+	this.birthday = new Date(dob);
+	console.log(this);
+
+	//	method
+	//calculate age from date of birth
+	this.getAge = function(){
+		//	calculate difference
+		const diff = Date.now() - this.birthday.getTime();
+		//	gnerate date based on new Date format
+		const ageDate = new Date(diff);
+		//	get full year of birth
+		return Math.abs(ageDate.getUTCFullYear() - 1970);//calculate age from birthday(unix standard)
+	}
+}
+//call it like this outside of constructor
+	//	it gives us Window Object
+		console.log(this);
+
+//	instatiate and object
+const brad = new Person('Brad', '9-10-1996');
+const john = new Person('John', '9-10-1989');
+console.log(brad.getAge());	//21
 */
