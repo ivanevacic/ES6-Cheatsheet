@@ -774,4 +774,45 @@ console.log(john.calculateAge());	//21
 console.log(john.getFullName());	//john wick
 john.getsMarried('Test');
 console.log(john.getFullName());	//john test
+
+
 */
+
+
+//	PROTOTYPAL INHERITANCE
+
+//person constructor
+function Person(firstName, lastName){
+	this.firstName = firstName;
+	this.lastName = lastName;
+}
+
+//greeting proto method
+Person.prototype.greeting = function(){
+	return `Hello there ${this.firstName} ${this.lastName}`;
+}
+
+const person1 = new Person('John', 'Doe');
+
+console.log(person1.greeting());	//Hello there John Doe
+
+
+//customer construction
+function Customer(firstName, lastName, phone, membership){
+	//we call person function	and 'inherit' values inside call();
+	Person.call(this, firstName, lastName);
+	this.phone = phone;
+	this.membership = membership;
+}
+//inherit the Person proto function
+Customer.prototype = Object.create(Person.prototype);
+//make customer.prototype return Customer()
+Customer.prototype.constructor = Customer;
+
+const customer1 = new Customer('Tom', 'Smith', '555-666', 'Standard');//Customer {firstName: "Tom", lastName: "Smith", phone: "555-666", membership: "Standard"}
+console.log(customer1.greeting());//Hello there Tom Smith
+//customer greeting
+Customer.prototype.greeting = function(){
+	return `Hello there ${this.firstName} ${this.lastName},Welcome to our Company`;
+}
+console.log(customer1.greeting());//Hello there Tom Smith,Welcome to our Company
