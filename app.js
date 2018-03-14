@@ -816,7 +816,7 @@ Customer.prototype.greeting = function(){
 	return `Hello there ${this.firstName} ${this.lastName},Welcome to our Company`;
 }
 console.log(customer1.greeting());//Hello there Tom Smith,Welcome to our Company
-*/
+
 
 //OBJECT.CREATE
 
@@ -848,3 +848,46 @@ const brad = Object.create(personPrototypes, {
 
 console.log(brad);//{firstName: "Brad", lastName: "Zukov", age: 30}
 console.log(brad.greeting());//Hello there Brad Zukov
+*/
+
+//	ES6 CLASSES
+
+//define class
+class Person {
+	constructor(firstName, lastName, dob){
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.birthday = new Date(dob);
+	}
+	greeting(){
+		return `Hello there ${this.firstName} ${this.lastName}`
+	}
+	calculateAge(){
+		const diff = Date.now() - this.birthday.getTime();
+		const ageDate = new Date(diff);
+		return Math.abs(ageDate.getUTCFullYear() - 1970);
+	}
+	getsMarried(newLastName){
+		this.lastName = newLastName;
+	}
+	//static methods->we can call the without instiating object
+	static addNumbers(x, y) {
+		return x + y;
+	}
+
+}
+
+//create class object
+const mary = new Person('Mary', 'Johnson', '11-13-1980');
+console.log(mary);//Person {firstName: "Mary", lastName: "Johnson"}
+console.log(mary.greeting());//Hello there Mary Johnson
+console.log(mary.calculateAge());//37
+mary.getsMarried('Test');
+console.log(mary);//Person {firstName: "Mary", lastName: "Test"
+
+//static methods testing
+//console.log(mary.addNumbers(1, 3));///Uncaught TypeError: mary.addNumbers is not a function
+console.log(Person.addNumbers(1, 3));//4
+
+
+
