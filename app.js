@@ -848,7 +848,7 @@ const brad = Object.create(personPrototypes, {
 
 console.log(brad);//{firstName: "Brad", lastName: "Zukov", age: 30}
 console.log(brad.greeting());//Hello there Brad Zukov
-*/
+
 
 //	ES6 CLASSES
 
@@ -889,5 +889,39 @@ console.log(mary);//Person {firstName: "Mary", lastName: "Test"
 //console.log(mary.addNumbers(1, 3));///Uncaught TypeError: mary.addNumbers is not a function
 console.log(Person.addNumbers(1, 3));//4
 
+
+//INHERITANCE
+
+class Person {
+	constructor(firstName, lastName){
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+	greeting(){
+		return `Hello there ${this.firstName} ${this.lastName}`;
+	}
+}
+//extend person class 
+class Customer extends Person {
+	constructor(firstName, lastName, phone, membership){
+		//call person(parent class) constructor
+		super(firstName, lastName);
+		///everything not in person class,but we want it here
+		this.phone = phone;
+		this.membership = membership;
+	}
+	static getMembershipCost() {
+		return 500;
+	}
+}
+
+//instatiate new customer
+const john = new Customer('Ivan', 'Evačić', '555-666', 'Premium');
+console.log(john);//Customer {firstName: "Ivan", lastName: "Evačić", phone: "555-666", membership: "Premium"}
+//call greeting method
+console.log(john.greeting());//Hello there Ivan Evačić
+			//Person.getMembershipCost wont work,because its Customer's function,Person cannot access it
+console.log(Customer.getMembershipCost());//500
+*/
 
 
