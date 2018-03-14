@@ -719,4 +719,59 @@ if(name2 === 'Jeff'){
 	console.log('No');//prints no because name2 is objects,=== checks if type is thesame,it isnt
 
 }
+
+
+//	PROTOTYPES
+
+function Person(firstName, lastName, dob) {
+	//this.name = 'Brad';//hard code name
+	this.firstName = firstName;
+	 this.lastName = lastName;
+	//by instiating object console.log is called
+	 
+	this.birthday = new Date(dob);
+	
+	//	method
+	//calculate age from date of birth
+	 this.calculateAge = function(){
+		//	calculate difference
+		const diff = Date.now() - this.birthday.getTime();
+		//	gnerate date based on new Date format
+		const ageDate = new Date(diff);
+		//	get full year of birth
+		return Math.abs(ageDate.getUTCFullYear() - 1970);//calculate age from birthday(unix standard)
+	}
+	console.log(this); 
+}
+
+//we can define our class functions here se we don't flood class with them
+//calculate age prototype
+Person.prototype.calculateAge = function(){
+	//	calculate difference
+	const diff = Date.now() - this.birthday.getTime();
+	//	gnerate date based on new Date format
+	const ageDate = new Date(diff);
+	//	get full year of birth
+	return Math.abs(ageDate.getUTCFullYear() - 1970);//calculate age from birthday(unix standard)
+	console.log(this);
+
+	//	THERE IS NO CALCULATE AGE FUNCTION IN CONSOLE.LOG FROM OBJECT FUNCTION
+}
+
+//get full name
+Person.prototype.getFullName = function(){
+	return `${this.firstName} ${this.lastName}`;
+}
+//get married
+Person.prototype.getsMarried = function(newLastName){
+	this.lastName = newLastName;
+}
+
+//instantiate new person
+const john = new Person('John', 'Wick', '3-21-1996');
+const mary = new Person('Mary', 'Johnson', '6-6-1956');
+console.log(john.calculateAge());	//21
+console.log(john.getFullName());	//john wick
+john.getsMarried('Test');
+console.log(john.getFullName());	//john test
 */
