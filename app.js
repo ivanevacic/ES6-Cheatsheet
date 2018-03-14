@@ -700,4 +700,23 @@ function Person(name, dob) {
 const brad = new Person('Brad', '9-10-1996');
 const john = new Person('John', '9-10-1989');
 console.log(brad.getAge());	//21
+
+
+	//BUILT IN CONSTRUCTORS
+
+const name1 = 'Jeff';
+const name2 = new String('Jeff');
+	//Possible to add data like this
+	  name2.foo = 'bar';
+console.log(name1);
+console.log(name2);	//	Gets string as object
+console.log(typeof name1);	//string
+console.log(typeof name2);	//object
+
+if(name2 === 'Jeff'){
+	console.log('yes');	//	would print yes if there is ==(checks only value,not type)
+}	else {
+	console.log('No');//prints no because name2 is objects,=== checks if type is thesame,it isnt
+
+}
 */
