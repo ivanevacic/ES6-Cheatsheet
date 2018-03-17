@@ -922,6 +922,40 @@ console.log(john);//Customer {firstName: "Ivan", lastName: "Evačić", phone: "
 console.log(john.greeting());//Hello there Ivan Evačić
 			//Person.getMembershipCost wont work,because its Customer's function,Person cannot access it
 console.log(Customer.getMembershipCost());//500
+
+
+
+//TRY CATCH
+
+
+
+	//USING TRY/CATCH WE CAN HANDLE ERRORS WITHOUT STOPING THE ENTIRE SCRIPT
+		try {
+			//produces reference error(myFunction is not defined)
+			//myFunction();
+			//produce type error
+			null.myFunction();
+				//catch returns TypeError
+		} catch(e) {	//Catch error
+			//ERROR MESSAGE TYPES
+				console.log(e);	//ReferenceError: myFunction is not defined
+				console.log(e.message);//myFunction is not defined
+				console.log(e.name);//ReferenceError
+				console.log(e instanceof ReferenceError); //true	//check if error type if reference error(it is => return true);
+		} finally {
+			//Runs regardless of try/catch
+				//THIS WILL ALWAYS RUN
+					console.log('Finally runs!');
+		}
+
+console.log('Program continues');
+
 */
+
+
+
+
+
+
 
 
