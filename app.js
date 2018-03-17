@@ -950,12 +950,72 @@ console.log(Customer.getMembershipCost());//500
 
 console.log('Program continues');
 
+
+
+
+//ITERATORS AND GENERATORS
+
+		//iterators->advanced loops that cna be paused
+		//generators->functions that can be paused and return multiple values
+
+
+//iterator example
+
+function nameIterator(names) {
+	let nextIndex = 0;
+
+	return {
+		next: function() {
+			return nextIndex < names.length ?
+				{value: names[nextIndex++], done: false} :
+				{done: true}
+		}
+	}
+}
+
+//create array of names
+const namesArr = ['Ivan', 'Jack', 'Rob'];
+//init iterator and pass in the namesArr
+const names = nameIterator(namesArr);
+console.log(names.next());//Ivan,done:false
+console.log(names.next());//Jack,done:false
+console.log(names.next());//Rob,done:false
+console.log(names.next());//done: true
+
+
+//generators example
+
+//generator function syntax
+function* sayNames() {
+	yield 'Jack';
+	yield 'Jill';
+	yield 'John';
+}
+
+const name = sayNames();
+console.log(name.next());//{value: "Jack", done: false}
+
 */
 
+//id creator
 
+function* createIDs() {
+	let index = 0;
 
+	while(true) {
+		yield index++;
+	}
 
+}
 
+const gen = createIDs();
+console.log(gen.next().value);//0
+console.log(gen.next().value);//1
+console.log(gen.next().value);//2
+console.log(gen.next().value);//3
+console.log(gen.next().value);//4
+console.log(gen.next().value);//5
+console.log(gen.next().value);//6
 
 
 
