@@ -1209,3 +1209,54 @@ map1.set(key3, 'Value of key3');
 
 */
 
+//SETS
+	//store UNIQUE values of any types(primitive or references)
+
+//create Set
+const set1 = new Set();
+
+//add values to Set
+set1.add(100);
+set1.add('A string');
+set1.add({name: 'Test'});
+set1.add(true);
+//if we try : set1.add(100)->it won't work as there already is 100 in set
+console.log(set1);//Set(4) {100, "A string", {…}, true}
+
+const set2 = new Set([1, true, 'string']);
+console.log(set2);//Set(3) {1, true, "string"}
+
+//get set count
+console.log(set1.size);//4
+
+//check for values
+console.log(set1.has(100));//true->there is 100 in set
+console.log(set1.has(50+50));//true
+console.log(set1.has({name: 'Test'}));//false->because it's reference
+
+//delete from the set
+set1.delete(100);
+console.log(set1);//Set(3) {"A string", {…}, true}
+
+//iterate trough sets
+	//for...of
+	for(let item of set1){
+		console.log(item);
+		//A string
+		//{name: 'Test'}
+		//true
+	}
+	//forEach
+	set1.forEach((value) => {
+		console.log(value);
+		//A string
+		//{name: 'Test'}
+		//true
+	})
+
+
+//CONVERT SETS TO ARRAYS
+const setArr = Array.from(set1);
+console.log(setArr);//(3) ["A string", {…}, true]
+
+
