@@ -1017,7 +1017,7 @@ console.log(gen.next().value);//4
 console.log(gen.next().value);//5
 console.log(gen.next().value);//6
 
-*/
+
 
 //SYMBOLS
 	//EVERY single symbol is UNIQUE
@@ -1062,3 +1062,69 @@ console.log(JSON.stringify({key: 'prop'}));//{"key":"prop"}
 console.log(JSON.stringify({[Symbol('sym1')]: 'prop'}));//{}
 
 
+
+//DESTRUCTURING
+	//EXTRACTS VARIABLES FROM ARRAYS AND OBJECT
+
+let a,b;
+//[a, b] = [100, 200];
+//rest pattern
+	//..rest -> spread operator
+[a, b, c, ...rest] = [100, 200, 300, 400, 500];
+console.log(a);//100
+console.log(b);//200
+//a and b have values 100,200->others are 'saved' in ...rest
+console.log(rest);//(3) [300, 400, 500]
+
+
+({a, b} = {a: 100, b: 200, c: 300, d: 400, e: 500});
+({a, b, ...rest} = {a: 100, b: 200, c: 300, d: 400, e: 500});
+console.log(a, b);//100 200
+console.log(rest);//{c: 300, d: 400, e: 500}
+
+
+
+
+//array destructuring
+
+const people = ['John', 'Beth', 'Mike'];
+const [person1, person2, person3] = people;
+console.log(person1, person2, person3);//John Beth Mike
+
+//parse array returned from function
+function getPeople() {
+	return ['John', 'Beth', 'Mike'];
+}
+
+let per1, per2, per3;
+[per1, per2, per3] = getPeople();
+console.log(per1, per2, per3);//John Beth Mike
+
+
+
+//object destructuring
+
+const person = {
+	name: 'John Doe',
+	age: 32,
+	city: 'Miami',
+	gender: 'Male',
+	sayHello: function () {
+		console.log('Hello');
+	}
+}
+
+//old es5 way
+ const name = person.name,
+	  age = person.age,
+	  city = person.city,
+	  gender = person.gender 
+
+//new es6 destructuring
+const { name, age, city, sayHello } = person;
+console.log(name, age, city, sayHello);//John Doe 32 Miami
+//John Doe 32 Miami ƒ () {
+	//console.log('Hello');
+//}
+
+*/
