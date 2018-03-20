@@ -995,7 +995,7 @@ function* sayNames() {
 const name = sayNames();
 console.log(name.next());//{value: "Jack", done: false}
 
-*/
+
 
 //id creator
 
@@ -1017,5 +1017,48 @@ console.log(gen.next().value);//4
 console.log(gen.next().value);//5
 console.log(gen.next().value);//6
 
+*/
+
+//SYMBOLS
+	//EVERY single symbol is UNIQUE
+
+//CREATE SYMBOL
+
+//const sym1 = Symbol();
+//const sym2 = Symbol('sym2');
+
+//console.log(sym1);//Symbol()
+//console.log(sym2);//Symbol(sym2)
+
+//console.log(Symbol() === Symbol());//false->because they can never be the same
+//console.log(`Hello ${sym1}`);//Uncaught TypeError: Cannot convert a Symbol value to a string
+//console.log(`Hello ${sym1.toString()}`);//Hello Symbol()
+
+
+//Unique object keys
+const KEY1 = Symbol();
+const KEY2 = Symbol('sym2');
+
+const myObj = {};
+
+//USE SYMBOL AS A PROPERTY
+myObj[KEY1] = 'Prop1';
+myObj[KEY2] = 'Prop2';
+
+//console.log(myObj[KEY1]);//PROP1	
+//console.log(myObj[KEY2]);//PROP2
+myObj.key3 = 'Prop3	';
+myObj.key4 = 'Prop4	';
+
+//SYMBOLS ARE NOT ENUMERABLE IN FOR...IN
+for(let i in myObj) {
+	console.log(`${i}: ${myObj[i]}`);
+	//key3: Prop3
+	//key4: Prop4
+}
+
+//symbols are ignored when using json.stringify
+console.log(JSON.stringify({key: 'prop'}));//{"key":"prop"}
+console.log(JSON.stringify({[Symbol('sym1')]: 'prop'}));//{}
 
 
